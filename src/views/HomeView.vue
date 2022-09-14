@@ -1,57 +1,72 @@
 <template>
-  <v-card class="mx-auto" max-width="344">
-    <v-card-text>
-      <div>Word of the Day</div>
-      <p class="text-h4 text--primary">el·ee·mos·y·nar·y</p>
-      <p>adjective</p>
-      <div class="text--primary">
-        relating to or dependent on charity; charitable.<br />
-        "an eleemosynary educational institution."
-      </div>
-    </v-card-text>
-    <v-card-actions>
-      <v-btn text color="teal accent-4" @click="reveal = true">
-        Learn More
-      </v-btn>
-    </v-card-actions>
+  <v-container>
+    <h1>ToDo List</h1>
+    <div>
+      <v-col>
+        <h2>LOGIN</h2>
 
-    <v-expand-transition>
-      <v-card
-        v-if="reveal"
-        class="transition-fast-in-fast-out v-card--reveal"
-        style="height: 100%"
-      >
-        <v-card-text class="pb-0">
-          <p class="text-h4 text--primary">Origin</p>
-          <p>
-            late 16th century (as a noun denoting a place where alms were
-            distributed): from medieval Latin eleemosynarius, from late Latin
-            eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’
-          </p>
-        </v-card-text>
-        <v-card-actions class="pt-0">
-          <v-btn text color="teal accent-4" @click="reveal = false">
-            Close
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-expand-transition>
-  </v-card>
+        <v-text-field
+          label="Usuário"
+          :rules="rules"
+          hide-details="auto"
+        ></v-text-field>
+        <v-text-field label="Senha"></v-text-field>
+
+        <v-btn class="blue ligthen-1">Login</v-btn>
+        <!-- @click="vaiParaLogin" -->
+      </v-col>
+      <!-- <TarefaCard /> -->
+    </div>
+  </v-container>
 </template>
 
 <script>
+// import TarefaCard from "../components/TarefaCard.vue";
+
 export default {
-  data: () => ({
-    reveal: false,
-  }),
+  components: {
+    // TarefaCard,
+  },
+  // methods: {
+  //   listarTarefas() {
+  //     TasksApi.getTasks((data) => {
+  //       this.listaDeTarefa = data;
+  //     });
+  //   },
+  //   mostrarCadastro() {
+  //     this.form.btn = "Adicionar";
+  //     this.exibir.form = true;
+  //     this.exibir.lista = false;
+  //   },
+  //   recebiSalvar(novaTarefa) {
+  //     TasksApi.createTask(novaTarefa, () => {
+  //       this.listarTarefas();
+  //       this.exibir.form = false;
+  //       this.exibir.lista = true;
+  //     });
+  //   },
+  //   recebiAlterar(tarefa) {
+  //     TasksApi.updateTask(tarefa, () => {
+  //       this.listarTarefas();
+  //       this.exibir.form = false;
+  //       this.exibir.lista = true;
+  //     });
+  //   },
+  //   recebiEditar(tarefaId) {
+  //     this.form.btn = "Alterar";
+  //     TasksApi.getTask(tarefaId, (task) => {
+  //       this.form.id = task.id;
+  //       this.form.title = task.title;
+  //       this.form.project = task.project;
+  //       this.exibir.form = true;
+  //       this.exibir.lista = false;
+  //     });
+  //   },
+  // },
+  // created() {
+  //   this.listarTarefas();
+  // },
 };
 </script>
 
-<style>
-.v-card--reveal {
-  bottom: 0;
-  opacity: 1 !important;
-  position: absolute;
-  width: 100%;
-}
-</style>
+<style></style>
