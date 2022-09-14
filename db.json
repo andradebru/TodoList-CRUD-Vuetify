@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "ler capitulo X",
+      "dueDate": "10/12/2022"
+    }
+  ],
+  {
+    "id": 2,
+    "title": "fazer Y",
+    "dueDate": "14/12/2022"
+  },
+
+  "users": [
+    {
+      "id": 1,
+      "user": "admin",
+      "password": "admin"
+    }
+  ]
+}
