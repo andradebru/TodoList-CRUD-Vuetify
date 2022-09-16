@@ -1,4 +1,4 @@
-# crud-vuetify-ok
+# crud-vuetify
 
 ## Project setup
 ```
